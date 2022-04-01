@@ -1,4 +1,4 @@
-﻿using assigment_3.Model;
+using assigment_3.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,13 @@ namespace assigment_3.View
             staff1 = new List<StaffUser>();
             admin1 = new List<AdminUser>();
         }
+        public class editException: Exception
+        {
+            public editException(string message) : base(message)
+            {
 
+            }
+        }
         internal void Add(User user)
         {
             user1.Add(user);
@@ -40,21 +46,55 @@ namespace assigment_3.View
         }
 
 
-        internal void edit(User user)
+        internal void edit(int id,string name,int age,User user2)
         {
-
+            try
+            {
+                if (id == user2.Id)
+                {
+                    user2.age = age;
+                    user2.Name = name;
+                }
+            }
+            catch(editException e)
+            {
+                Console.WriteLine("the id incorrect", e.Message);
+            }
 
         }
-        internal void edit(StaffUser staff)
+        internal void edit(int id, string name, int age,StaffUser staff2)
         {
+            try
+            {
 
-
+                if (id == staff2.Id)
+                {
+                    staff2.age = age;
+                    staff2.Name = name;
+                }
+            }
+            catch(editException e)
+            {
+                Console.WriteLine("the id incorrect",e.Message);
+            }
 
         }
-        internal void edit(AdminUser admin)
+        internal void edit(int id, string name, int age, AdminUser admin2)
         {
+            try
+            {
 
 
+                if (id == admin2.Id)
+                {
+                    admin2.age = age;
+                    admin2.Name = name;
+                }
+            }
+            catch (editException e)
+            {
+                Console.WriteLine("the id incorrect"+e.Message);
+            }
 
         }
         //3

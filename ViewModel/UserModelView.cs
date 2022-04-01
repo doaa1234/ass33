@@ -98,7 +98,7 @@ namespace assigment_3.View
 
         }
         //3
-        public void Delete(int indexUser)
+        public void RemoveAt(int indexUser)
         {
             if (user1.Count == 0)
             {
@@ -137,68 +137,9 @@ namespace assigment_3.View
         }
 
 
-        /*    internal void Delete(int indexuser)
-            {
-                if (user1.Count == 0)
-                {
-                    throw new Exception("the list is empty");
-
-                }
-                else if (indexuser >= user1.Count)
-                {
-                    throw new Exception($"index[{indexuser}] out of bound exception");
-                }
-                user1.RemoveAt(indexuser);
-
-            }
-            public void RemoveAT(float indexStaff)
-            {
-                if (users.Count == 0)
-                {
-                    throw new Exception("the list is empty");
-                }
-                else if (indexStaff >= users.Count)
-                {
-                    throw new Exception($"index[{indexStaff}] out of bound exception");
-                }
-                users.RemoveAt((int)indexStaff);
-            }
-            internal void Delete(int indexstaff)
-            {
-                if (staff1.Count == 0)
-                {
-                    throw new Exception("the list is empty");
-
-                }
-                else if (indexstaff >= staff1.Count)
-                {
-                    throw new Exception($"index[{indexstaff}] out of bound exception");
-                }
-                staff1.RemoveAt(indexstaff);
-
-            }
-            internal void Delete(int indexadmin)
-            {
-                if (admin1.Count == 0)
-                {
-                    throw new Exception("the list is empty");
-
-                }
-                else if (indexadmin >= admin1.Count)
-                {
-                    throw new Exception($"index[{indexadmin}] out of bound exception");
-                }
-                admin1.RemoveAt(indexadmin);
-
-            }
-        */
+ 
 
     }
 }
-        //3
-
-
-
-
     
 
